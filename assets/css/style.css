@@ -94,6 +94,15 @@ h4 {
   font-size: 22px;
 }
 
+.h4:hover{
+  color : #0D6EFD;
+}
+
+h4.clickable {
+  cursor: pointer;
+  color : #0D6EFD;
+}
+
 h5 {
   font-size: 18px;
 }

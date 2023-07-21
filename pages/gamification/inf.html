@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inflation Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Inflation Calculator</h2>
+      <form>
+        <div class="form-group">
+          <label for="currentExpenses">Current Cost of Expenses:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="currentExpenses"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="inflationRate">Expected Annual Inflation Rate (%):</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inflationRate"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="termInYears">Term (in years):</label>
+          <input type="number" class="form-control" id="termInYears" required />
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="calculateInflation()"
+        >
+          Calculate
+        </button>
+      </form>
+
+      <h3 class="mt-4">Output:</h3>
+      <div class="row">
+        <div class="col">
+          <p>Future Cost: <span id="futureCost"></span></p>
+          <p>
+            How much amount can be saved per month:
+            <span id="savedAmountPerMonth"></span>
+          </p>
+          <!-- <p>Term (in months): <span id="termInMonths"></span></p> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculateInflation() {
+        const currentExpenses = parseFloat(
+          document.getElementById("currentExpenses").value
+        );
+        const inflationRate =
+          parseFloat(document.getElementById("inflationRate").value) / 100;
+        const termInYears = parseFloat(
+          document.getElementById("termInYears").value
+        );
+
+        const futureCost =
+          currentExpenses * Math.pow(1 + inflationRate, termInYears);
+        const termInMonths = termInYears * 12;
+        const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
+
+
+
+
+        document.getElementById("futureCost").innerText = futureCost.toFixed(2);
+        document.getElementById("savedAmountPerMonth").innerText =
+          savedAmountPerMonth.toFixed(2);
+        document.getElementById("termInMonths").innerText = termInMonths;
+      }
+    </script>
+  </body>
+</html>

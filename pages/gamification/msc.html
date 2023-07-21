@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Miscellaneous Goal Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Miscellaneous Goal Calculator</h2>
+      <div class="row">
+        <!-- Div 2: Rate related inputs -->
+        <div class="col-lg-4 col-md-6 mb-3">
+          <h3>Rate</h3>
+          <div class="form-group">
+            <label for="inflationRate">Annual Inflation Rate (%):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inflationRate"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="investmentRate">Investment Rate (%):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="investmentRate"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Div 3: Money related inputs -->
+        <div class="col-lg-4 col-md-12 mb-3">
+          <h3>Money</h3>
+          <div class="form-group">
+            <label for="currentExpenses">Current Cost of Goal:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="currentExpenses"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="AmountAlreadysaved"
+              >Amount you have already saved for the goal:</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="AmountAlreadysaved"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3">
+          <h3>Age</h3>
+          <div class="form-group">
+            <label for="termInYears">Term (in years):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="termInYears"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="calculateGoals()">
+        Calculate
+      </button>
+
+      <h3 class="mt-4"></h3>
+      <div class="row">
+        <div class="col">
+          <p>Future Cost: <span id="futureCost"></span></p>
+          <p>
+            How much amount can be saved per month:
+            <span id="savedAmountPerMonth"></span>
+          </p>
+          <p>Term (in months): <span id="termInMonths"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculateGoals() {
+        const currentExpenses = parseFloat(
+          document.getElementById("currentExpenses").value
+        );
+        const inflationRate =
+          parseFloat(document.getElementById("inflationRate").value) / 100;
+        const termInYears = parseFloat(
+          document.getElementById("termInYears").value
+        );
+        const AmountAlreadysaved = parseFloat(
+          document.getElementById("AmountAlreadysaved").value
+        );
+        const investmentRate =
+          parseFloat(document.getElementById("investmentRate").value) / 100;
+
+        const futureCost =
+          currentExpenses * Math.pow(1 + inflationRate, termInYears);
+        const termInMonths = termInYears * 12;
+        const nominal = investmentRate / 12;
+        const corpus =
+          AmountAlreadysaved * Math.pow(1 + investmentRate, termInYears);
+        const subtractfrom = futureCost - corpus;
+        const savedAmountPerMonth =
+          (subtractfrom * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
+
+        document.getElementById("futureCost").innerText = futureCost.toFixed(2);
+        document.getElementById("savedAmountPerMonth").innerText =
+          savedAmountPerMonth.toFixed(2);
+        document.getElementById("termInMonths").innerText = termInMonths;
+      }
+    </script>
+  </body>
+</html>
