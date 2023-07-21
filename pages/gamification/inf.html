@@ -10,6 +10,7 @@
   <body>
     <div class="container mt-5">
       <h2>Inflation Calculator</h2>
+      <br>
       <form>
         <div class="form-group">
           <label for="currentExpenses">Current Cost of Expenses:</label>
@@ -20,6 +21,7 @@
             required
           />
         </div>
+        <br>
         <div class="form-group">
           <label for="inflationRate">Expected Annual Inflation Rate (%):</label>
           <input
@@ -29,10 +31,12 @@
             required
           />
         </div>
+        <br>
         <div class="form-group">
           <label for="termInYears">Term (in years):</label>
           <input type="number" class="form-control" id="termInYears" required />
         </div>
+        <br>
         <button
           type="button"
           class="btn btn-primary"
@@ -42,14 +46,14 @@
         </button>
       </form>
 
-      <h3 class="mt-4">Output:</h3>
+      <h3 class="mt-4"></h3>
       <div class="row">
         <div class="col">
-          <p>Future Cost: <span id="futureCost"></span></p>
-          <p>
+          <p1>Future Cost: <span id="futureCost"></span></p1><br>
+          <p1>
             How much amount can be saved per month:
             <span id="savedAmountPerMonth"></span>
-          </p>
+          </p1>
           <!-- <p>Term (in months): <span id="termInMonths"></span></p> -->
         </div>
       </div>

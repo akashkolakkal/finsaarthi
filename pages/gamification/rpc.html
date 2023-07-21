@@ -10,6 +10,7 @@
   <body>
     <div class="container mt-5">
       <h2>Retirement Calculator</h2>
+      <br>
       <div class="row">
         <!-- Div 1: Age related inputs -->
         <div class="col-lg-4 col-md-6 mb-3">
@@ -23,6 +24,7 @@
               required
             />
           </div>
+          <br>
           <div class="form-group">
             <label for="retirementAge">Retirement Age:</label>
             <input
@@ -32,6 +34,7 @@
               required
             />
           </div>
+          <br>
           <div class="form-group">
             <label for="lifeExpectancy">Life Expectancy Age:</label>
             <input
@@ -55,6 +58,7 @@
               required
             />
           </div>
+          <br>
           <div class="form-group">
             <label for="postTaxReturnRate">Post Tax Rate of Return (%):</label>
             <input
@@ -64,6 +68,7 @@
               required
             />
           </div>
+          <br>
           <div class="form-group">
             <label for="currentInvestmentRate"
               >Current Investment Rate (%):</label
@@ -88,7 +93,7 @@
               id="currentExpenses"
               required
             />
-          </div>
+          </div><br>
           <div class="form-group">
             <label for="retirementCorpus">Amount you already have:</label>
             <input
@@ -108,21 +113,20 @@
       >
         Calculate
       </button>
-      <h3 class="mt-4">Output:</h3>
+      <h3 class="mt-4"></h3>
       <div class="row">
-        <div class="col-lg-4 col-md-6 mb-3 d-flex justify-content-between">
-          <p>FV of Expenses:</p>
-          <p class="font-weight-bold"><span id="futureExpenses"></span></p>
+        <div>
+          <p1>FV of Expenses:</p1>
+          <span id="futureExpenses"></span>
         </div>
-        <div class="col-lg-4 col-md-6 mb-3 d-flex justify-content-between">
-          <p>Corpus required at the Age of retirement:</p>
-          <p class="font-weight-bold">
+        <div>
+          <p1>Corpus required at the Age of retirement:</p1>
             <span id="corpusRequiredAtRetirement"></span>
           </p>
         </div>
-        <div class="col-lg-4 col-md-12 mb-3 d-flex justify-content-between">
-          <p>How much SIP is required to save (per month):</p>
-          <p class="font-weight-bold"><span id="sipRequired"></span></p>
+        <div>
+          <p1>How much SIP is required to save (per month):</p1>
+          <p><span id="sipRequired"></span></p>
         </div>
       </div>
     </div>
