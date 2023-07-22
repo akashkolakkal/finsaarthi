@@ -107,7 +107,15 @@ h4 {
 h4.clickable {
   cursor: pointer;
   color: #361cc1;
+  /* transform: scaleX(1); */
+  transform: translateX(0);
+  transition: transform 0.3s ease;
   /* color : #6610f2; */
+}
+
+h4.clickable:hover {
+  transform: translateX(20px); /* Change the value to adjust how much it moves to the right */
+  /* transform: scaleX(1.1); */
 }
 
 h5 {
