@@ -109,6 +109,40 @@ function calculateInflation() {
     savedAmountPerMonth.toFixed(2);
   // document.getElementById("termInMonths").innerText = termInMonths;
 }
+
+function calculateSip() {
+  const monthlySipAmt = parseFloat(
+    document.getElementById("monthlySipAmt").value
+  );
+  const sipInvestmentRate =
+    parseFloat(document.getElementById("sipInvestmentRate").value) / 100;
+  const termInYears = parseFloat(
+    document.getElementById("termInYears").value
+  );
+
+  const monthlyRate = sipInvestmentRate / 12;
+  const termInMonths = termInYears * 12;
+
+  var futureValue = 0;
+
+  for (var i = 0; i < termInMonths; i++) {
+          futureValue += monthlySipAmt;
+          futureValue *= (1 + monthlyRate);
+  }
+
+  // const futureCost =
+  //   currentExpenses * Math.pow(1 + inflationRate, termInYears);
+  // const termInMonths = termInYears * 12;
+  // const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
+
+
+
+
+  document.getElementById("futureValue").innerText = futureValue.toFixed(2);
+  // document.getElementById("savedAmountPerMonth").innerText =
+  //   savedAmountPerMonth.toFixed(2);
+  document.getElementById("termInYears").innerText = termInYears;
+}
     
 
 (function () {
