@@ -75,11 +75,12 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-primary" onclick="calculateGoals()">
+      <button type="button" class="btn btn-primary" onclick="calculateGoals(),document.getElementById('hiddenElement').style.display = 'block';">
         Calculate
       </button>
 
       <h3 class="mt-4"></h3>
+      <div id="hiddenElement" class="hiddenElement">
       <div class="row">
         <div class="col">
           <p1>Future Cost: <span id="futureCost"></span></p1><Br>
@@ -93,6 +94,7 @@
           <p class="text-end">*Figures may vary by a few pointers</p>
           <p class="text-end">*This is for educational purposes only</p>
         </div>
+      </div>
       </div>
     </div>
 

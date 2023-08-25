@@ -2443,3 +2443,8 @@ button[aria-expanded="true"] {
 .hero-image-content p {
   color: var(--primary-color);
 }
+
+.hiddenElement
+{
+  display: none;
+}

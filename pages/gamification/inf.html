@@ -40,13 +40,14 @@
         <button
           type="button"
           class="btn btn-primary"
-          onclick="calculateInflation()"
+          onclick="calculateInflation(),document.getElementById('hiddenElement').style.display = 'block';"
         >
           Calculate
         </button>
       </form>
 
       <h3 class="mt-4"></h3>
+      <div id="hiddenElement" class="hiddenElement">
       <div class="row">
         <div class="col">
           <p1>Future Cost: <span id="futureCost"></span></p1>
@@ -61,6 +62,7 @@
           <p class="text-end">*This is for educational purposes only</p>
         </div>
       </div>
+    </div>
     </div>
 
     <script>

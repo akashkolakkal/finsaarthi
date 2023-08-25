@@ -224,12 +224,13 @@
                 <input type="number" class="form-control" id="termInYears" required />
               </div>
               <br>
-              <button type="button" class="btn btn-primary" onclick="calculateInflation()">
+              <button type="button" class="btn btn-primary" onclick="calculateInflation(),document.getElementById('hiddenElement').style.display = 'block';">
                 Calculate
               </button>
             </form>
 
             <h3 class="mt-4"></h3>
+            <div id="hiddenElement" class="hiddenElement">
             <div class="row">
               <div class="col">
                 <p1>Future Cost: <span id="futureCost"></span></p1><br>
@@ -242,6 +243,7 @@
                 <p class="text-end">*Figures may vary by a few pointers</p>
                 <p class="text-end">*This is for educational purposes only</p>
               </div>
+            </div>
             </div>
           </div>
 

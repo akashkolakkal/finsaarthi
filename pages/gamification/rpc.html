@@ -109,30 +109,24 @@
       <button
         type="button"
         class="btn btn-primary"
-        onclick="calculateRetirement()"
+        onclick="calculateRetirement(),document.getElementById('hiddenElement').style.display = 'block';"
       >
         Calculate
       </button>
       <h3 class="mt-4"></h3>
+      <div id="hiddenElement" class="hiddenElement">
       <div class="row">
-        <div>
-          <p1>Future Value of Expenses: </p1>
-          <span id="futureExpenses"></span>
-        </div>
-        <div>
-          <p1>Corpus required at the Age of retirement:</p1>
-            <span id="corpusRequiredAtRetirement"></span>
+        <div class="col">
+          <p1>Future Value of Expenses: <span id="futureExpenses"></span></p1><Br>
+          <p1>Corpus required at the Age of retirement: <span id="corpusRequiredAtRetirement"></span>
           </p>
-        </div>
-        <div>
-          <p1>How much SIP is required to save (per month):</p1>
-          <p><span id="sipRequired"></span></p>
-          
-          
-        </div>
+          <p1>How much SIP is required to save (per month): 
+          <span id="sipRequired"></span></p1>
         <p class="text-end">*Figures may vary by a few pointers</p>
         <p class="text-end">*This is for educational purposes only</p>
       </div>
+      </div>
+      </div> 
     </div>
 
     <script>
