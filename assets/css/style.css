@@ -2448,3 +2448,7 @@ button[aria-expanded="true"] {
 {
   display: none;
 }
+
+.large-letter {
+  font-size: 1.3em; /* Adjust the size as needed */
+}
