@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h2>Retirement Calculator</h2>
+      <h2 style="color: #361cc1;;">Retirement Calculator</h2>
       <br>
       <div class="row">
         <!-- Div 1: Age related inputs -->
@@ -117,11 +117,19 @@
       <div id="hiddenElement" class="hiddenElement">
       <div class="row">
         <div class="col">
-          <p1>Future Value of Expenses: <span id="futureExpenses"></span></p1><Br>
-          <p1>Corpus required at the Age of retirement: <span id="corpusRequiredAtRetirement"></span>
+          <div class="wrapper">
+          <p1><span style="color: black;">Future Value of Expenses = </span>
+          <span style="font-weight: bold; font-size: 1.5em;">Rs.</span>
+          <span style="font-weight: bold; font-size: 1.5em;" id="futureExpenses"></span></p1><Br>
+          <p1><span style="color: black;">Corpus required at the Age of retirement = </span>
+          <span style="font-weight: bold; font-size: 1.5em;">Rs.</span> 
+          <span style="font-weight: bold; font-size: 1.5em;" id="corpusRequiredAtRetirement"></span>
           </p>
-          <p1>How much SIP is required to save (per month): 
-          <span id="sipRequired"></span></p1>
+          <p1><span style="color: black;"> How much SIP is required to save (per month) = </span>
+          <span style="font-weight: bold; font-size: 1.5em;">Rs.</span> 
+          <span style="font-weight: bold; font-size: 1.5em;" id="sipRequired"></span></p1>
+        </div>
+        <br><br>
         <p class="text-end">*Figures may vary by a few pointers</p>
         <p class="text-end">*This is for educational purposes only</p>
       </div>

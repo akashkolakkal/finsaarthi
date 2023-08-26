@@ -6,10 +6,11 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
   </head>
   <body>
     <div class="container mt-5">
-      <h2>Miscellaneous Goal Calculator</h2>
+      <h2 style="color: #361cc1;;">Miscellaneous Goal Calculator</h2>
       <br>
       <div class="row">
         <!-- Div 2: Rate related inputs -->
@@ -83,12 +84,19 @@
       <div id="hiddenElement" class="hiddenElement">
       <div class="row">
         <div class="col">
-          <p1>Future Cost: <span id="futureCost"></span></p1><Br>
-          <p1>
-            How much amount can be saved per month:
-            <span id="savedAmountPerMonth"></span>
-          </p1><br>
-          <p1>Term (in months): <span id="termInMonths"></span></p1>
+          <div class="wrapper">
+          <p1><span style="color: black;">Future Cost = </span><span style="font-weight: bold; font-size: 1.5em;">Rs.</span><span style="font-weight: bold; font-size: 1.5em;" id="futureCost"></span></p1>
+          <br>
+          <p1><span style="color: black;">
+            How much amount can be saved per month = </span>
+            <span style="font-weight: bold; font-size: 1.5em;">Rs.</span>
+            <span style="font-weight: bold; font-size: 1.5em;" id="savedAmountPerMonth"></span>
+            </p1>
+            <br>
+          <p1><span style="color: black;">Term (in months) = </span>
+            <span style="font-weight: bold; font-size: 1.5em;">Rs.</span> 
+            <span style="font-weight: bold; font-size: 1.5em;" id="termInMonths"></span></p1>
+          </div>  
           <br>
           <br>
           <p class="text-end">*Figures may vary by a few pointers</p>

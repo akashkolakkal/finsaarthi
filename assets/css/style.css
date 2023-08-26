@@ -2452,3 +2452,9 @@ button[aria-expanded="true"] {
 .large-letter {
   font-size: 1.3em; /* Adjust the size as needed */
 }
+
+.wrapper{
+  border: solid 3px #000000; padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  margin-right: 0px;
+  }
