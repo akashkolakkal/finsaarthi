@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   <!--====== Title ======-->
-  <title>Finsaarthi - Home</title>
+  <title>Finsaarthi - Gamification</title>
 
   <meta name="description" content="Your financial Saarthi" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -180,13 +180,7 @@
 
                 </div>
               </div>
-              <div class="d-flex align-items-center gap-3">
-
-                <div>
-                  <h4 class="clickable" onclick="loadHTMLFile('sip.html')">> SIP-O-Meter</h4>
-
-                </div>
-              </div>
+              
               <div class="d-flex align-items-center gap-3">
 
                 <div>
@@ -200,6 +194,15 @@
 
                 </div>
               </div>
+              <div class="d-flex align-items-center gap-3">
+
+                <div>
+                  <h4 class="clickable" onclick="loadHTMLFile('sip.html')">
+                    > SIP-<span class="large-letter">O</span>-Meter
+                  </h4>                  
+              
+                </div>
+              </div>
 
             </div>
           </div>
@@ -210,17 +213,17 @@
             <br>
             <form>
               <div class="form-group">
-                <label for="currentExpenses">Current Cost of Expenses:</label>
+                <label for="currentExpenses">Current Cost of Expenses (Rs.)</label>
                 <input type="number" class="form-control" id="currentExpenses" required />
               </div>
               <br>
               <div class="form-group">
-                <label for="inflationRate">Expected Annual Inflation Rate (%):</label>
+                <label for="inflationRate">Expected Annual Inflation Rate (%)</label>
                 <input type="number" class="form-control" id="inflationRate" required />
               </div>
               <br>
               <div class="form-group">
-                <label for="termInYears">Term (in years):</label>
+                <label for="termInYears">Term (in years)</label>
                 <input type="number" class="form-control" id="termInYears" required />
               </div>
               <br>
@@ -233,10 +236,13 @@
             <div id="hiddenElement" class="hiddenElement">
             <div class="row">
               <div class="col">
-                <p1>Future Cost: <span id="futureCost"></span></p1><br>
+                <p1>Future Cost: <span style="font-weight: bold; font-size: 1.5em;">Rs.</span><span style="font-weight: bold; font-size: 1.5em;" id="futureCost"></span></p1>
+      
+                <br>
                 <p1>
-                  How much amount can be saved per month:
-                  <span id="savedAmountPerMonth"></span>
+                  Amount to be saved per month:
+                  <span style="font-weight: bold; font-size: 1.5em;">Rs.</span>
+                  <span style="font-weight: bold; font-size: 1.5em;" id="savedAmountPerMonth"></span>
                 </p1>
                 <br>
                 <br>
