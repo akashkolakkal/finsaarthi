@@ -115,86 +115,46 @@
       </button>
       <h3 class="mt-4"></h3>
       <div id="hiddenElement" class="hiddenElement">
-      <div class="row">
-        <div class="col">
-          <div class="wrapper">
-          <p1><span style="color: black;">Future Value of Expenses = </span>
-          <span style="font-weight: bold; font-size: 1.5em;">Rs.</span>
-          <span style="font-weight: bold; font-size: 1.5em;" id="futureExpenses"></span></p1><Br>
-          <p1><span style="color: black;">Corpus required at the Age of retirement = </span>
-          <span style="font-weight: bold; font-size: 1.5em;">Rs.</span> 
-          <span style="font-weight: bold; font-size: 1.5em;" id="corpusRequiredAtRetirement"></span>
-          </p>
-          <p1><span style="color: black;"> How much SIP is required to save (per month) = </span>
-          <span style="font-weight: bold; font-size: 1.5em;">Rs.</span> 
-          <span style="font-weight: bold; font-size: 1.5em;" id="sipRequired"></span></p1>
-        </div>
-        <br><br>
-        <p class="text-end">*Figures may vary by a few pointers</p>
-        <p class="text-end">*This is for educational purposes only</p>
+        <div class="row">
+          <div class="col">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Outflow</th>
+                          <th scope="col">Amount(Rs.)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Future Value of Expenses</td>
+                      <td id="futureValueCell">NA</td>
+                  </tr>
+                  <tr>
+                      <td>Corpus required at the Age of retirement</td>
+                      <td id="corpusRequiredCell">NA</td>
+                  </tr>
+                  <tr>
+                      <td>How much SIP is required to save (per month)</td>
+                      <td id="sipRequiredCell">NA</td>
+                  </tr>
+                  </tbody>
+              </table>
+              
+              <br>
+              
+                <div class="col">
+                  <p class="text-end">*Figures may vary by a few pointers</p>
+                  <p class="text-end">*This is for educational purposes only</p>
+              </div>
+          </div>
+          </div>
       </div>
-      </div>
-      </div> 
     </div>
+  </div>
+    
 
     <script>
-      function calculateRetirement() {
-        const currentAge = parseFloat(
-          document.getElementById("currentAge").value
-        );
-        const retirementAge = parseFloat(
-          document.getElementById("retirementAge").value
-        );
-        const lifeExpectancy = parseFloat(
-          document.getElementById("lifeExpectancy").value
-        );
-        const inflationRate =
-          parseFloat(document.getElementById("inflationRate").value) / 100;
-        const currentExpenses = parseFloat(
-          document.getElementById("currentExpenses").value
-        );
-        const postTaxReturnRate =
-          parseFloat(document.getElementById("postTaxReturnRate").value) / 100;
-        const retirementCorpus = parseFloat(
-          document.getElementById("retirementCorpus").value
-        );
-        const currentInvestmentRate =
-          parseFloat(document.getElementById("currentInvestmentRate").value) /
-          100;
-
-        const yearsToRetirement = retirementAge - currentAge;
-        const postRetirementYears = lifeExpectancy - retirementAge;
-        const ageDifferenceMonths = postRetirementYears * 12;
-
-        const futureExpenses =
-          currentExpenses * Math.pow(1 + inflationRate, yearsToRetirement);
-        const realRateOfReturn =
-          (postTaxReturnRate - inflationRate) / (1 + inflationRate);
-        //   Math.pow(1 + currentInvestmentRate, 1 + postTaxReturnRate) - 1;
-        const Nominal =
-          (12 * (Math.pow(1 + realRateOfReturn, 1 / 12) - 1)) / 12;
-        const corpusRequiredAtRetirement =
-          futureExpenses *
-          ((1 - Math.pow(1 + Nominal, -ageDifferenceMonths)) / Nominal);
-
-        const corpusRaisedtoYears = 
-          retirementCorpus * (Math.pow((1+currentInvestmentRate), yearsToRetirement));
-
-        const subtractFromPresentValue =
-          corpusRequiredAtRetirement - corpusRaisedtoYears;
-          
-        const sipYearly = 
-          (subtractFromPresentValue*currentInvestmentRate)/Math.pow(1+currentInvestmentRate,yearsToRetirement);
-
-        const sipRequired =
-          sipYearly / 12;
-        document.getElementById("futureExpenses").innerText =
-          futureExpenses.toFixed(2);
-        document.getElementById("corpusRequiredAtRetirement").innerText =
-          corpusRequiredAtRetirement.toFixed(2);
-        document.getElementById("sipRequired").innerText =
-          sipRequired.toFixed(2);
-      }
+      
     </script>
   </body>
 </html>

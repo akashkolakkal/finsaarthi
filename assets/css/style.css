@@ -2458,3 +2458,14 @@ button[aria-expanded="true"] {
   border-radius: 10px;
   margin-right: 0px;
   }
+
+
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+  
+th, td {
+    padding: 8px;
+}
