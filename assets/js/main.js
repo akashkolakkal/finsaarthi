@@ -47,12 +47,16 @@ function calculateRetirement() {
 
         const sipRequired =
           sipYearly / 12;
-        document.getElementById("futureExpenses").innerText =
-          futureExpenses.toFixed(2);
-        document.getElementById("corpusRequiredAtRetirement").innerText =
-          corpusRequiredAtRetirement.toFixed(2);
-        document.getElementById("sipRequired").innerText =
-          sipRequired.toFixed(2);
+        // document.getElementById("futureExpenses").innerText =
+        //   futureExpenses.toFixed(2);
+        // document.getElementById("corpusRequiredAtRetirement").innerText =
+        //   corpusRequiredAtRetirement.toFixed(2);
+        // document.getElementById("sipRequired").innerText =
+        //   sipRequired.toFixed(2);
+
+        futureValueCell.textContent = futureExpenses.toFixed(2);
+        corpusRequiredCell.textContent = corpusRequiredAtRetirement.toFixed(2);
+        sipRequiredCell.textContent = sipRequired.toFixed(2);
 }
 
 function calculateGoals() {
