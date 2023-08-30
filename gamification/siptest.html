@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SIP-o-Meter</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 style="color: #361cc1;;">SIP-<span class="large-letter">O</span>-Meter</h2>
+      <br>
+      <div class="row">
+        <!-- Div 1: Age related inputs -->
+        <div class="col">
+          <!-- <h3>Age</h3> -->
+          <div class="form-group">
+            <label for="monthlySipAmt">Monthly SIP Amount (Rs.)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="monthlySipAmt"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="sipInvestmentRate">Expected Returns(%)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="sipInvestmentRate"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="termInYears">Term (in years)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="termInYears"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="calculateSip(),document.getElementById('hiddenElement').style.display = 'block';"
+      >
+        Calculate
+      </button>
+      <h3 class="mt-4"></h3>
+      <div id="hiddenElement" class="hiddenElement">
+        <div class="row">
+          <div class="col">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Outflow</th>
+                          <th scope="col">Amount(Rs.)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Future Value</td>
+                      <td id="futureValue">NA</td>
+                  </tr>
+                  </tbody>
+              </table>
+              
+              <br>
+              
+                <div class="col">
+                  <p class="text-end">*Figures may vary by a few pointers</p>
+                  <p class="text-end">*This is for educational purposes only</p>
+              </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    
+
+    <script>
+      
+    </script>
+  </body>
+</html>
