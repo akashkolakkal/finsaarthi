@@ -47,16 +47,10 @@ function calculateRetirement() {
 
         const sipRequired =
           sipYearly / 12;
-        // document.getElementById("futureExpenses").innerText =
-        //   futureExpenses.toFixed(2);
-        // document.getElementById("corpusRequiredAtRetirement").innerText =
-        //   corpusRequiredAtRetirement.toFixed(2);
-        // document.getElementById("sipRequired").innerText =
-        //   sipRequired.toFixed(2);
 
-        futureValueCell.textContent = futureExpenses.toFixed(2);
-        corpusRequiredCell.textContent = corpusRequiredAtRetirement.toFixed(2);
-        sipRequiredCell.textContent = sipRequired.toFixed(2);
+        futureValueCell.textContent = Math.round(futureExpenses).toLocaleString('hi-IN');
+        corpusRequiredCell.textContent = Math.round(corpusRequiredAtRetirement).toLocaleString('hi-IN')
+        sipRequiredCell.textContent = Math.round(sipRequired).toLocaleString('hi-IN')
 }
 
 function calculateGoals() {
@@ -84,13 +78,8 @@ function calculateGoals() {
   const savedAmountPerMonth =
     (subtractfrom * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
 
-  // document.getElementById("futureCost").innerText = futureCost.toFixed(2);
-  // document.getElementById("savedAmountPerMonth").innerText =
-  //   savedAmountPerMonth.toFixed(2);
-  // document.getElementById("termInMonths").innerText = termInMonths;
-
-  futureCostCell.textContent = futureCost.toFixed(2);
-  savedAmountPerMonthCell.textContent = savedAmountPerMonth.toFixed(2);
+  futureCostCell.textContent = Math.round(futureCost).toLocaleString('hi-IN')
+  savedAmountPerMonthCell.textContent = Math.round(savedAmountPerMonth).toLocaleString('hi-IN')
   termInMonthsCell.textContent = termInMonths;
 }
 
@@ -116,6 +105,9 @@ function calculateInflation() {
   // // document.getElementById("savedAmountPerMonth").innerText =
   //   savedAmountPerMonth.toFixed(2);
   // document.getElementById("termInMonths").innerText = termInMonths;
+
+  futureCostCell.textContent = Math.round(futureCost).toLocaleString('hi-IN');
+  savedAmountPerMonthCell.textContent = Math.round(savedAmountPerMonth).toLocaleString('hi-IN');
 }
 
 function calculateSip() {
@@ -141,7 +133,7 @@ function calculateSip() {
   // document.getElementById("futureValue").innerText = futureValue.toFixed(2);
   // document.getElementById("termInYears").innerText = termInYears;
 
-  futureCostCell.textContent = futureValue.toFixed(2);
+  futureCostCell.textContent = Math.round(futureValue).toLocaleString('hi-IN')
 }
     
 
