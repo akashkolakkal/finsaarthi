@@ -84,10 +84,14 @@ function calculateGoals() {
   const savedAmountPerMonth =
     (subtractfrom * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
 
-  document.getElementById("futureCost").innerText = futureCost.toFixed(2);
-  document.getElementById("savedAmountPerMonth").innerText =
-    savedAmountPerMonth.toFixed(2);
-  document.getElementById("termInMonths").innerText = termInMonths;
+  // document.getElementById("futureCost").innerText = futureCost.toFixed(2);
+  // document.getElementById("savedAmountPerMonth").innerText =
+  //   savedAmountPerMonth.toFixed(2);
+  // document.getElementById("termInMonths").innerText = termInMonths;
+
+  futureCostCell.textContent = futureCost.toFixed(2);
+  savedAmountPerMonthCell.textContent = savedAmountPerMonth.toFixed(2);
+  termInMonthsCell.textContent = termInMonths;
 }
 
 function calculateInflation() {
@@ -108,9 +112,9 @@ function calculateInflation() {
 
   const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
 
-  document.getElementById("futureCost").innerText = futureCost.toFixed(2);
-  document.getElementById("savedAmountPerMonth").innerText =
-    savedAmountPerMonth.toFixed(2);
+  // document.getElementById("futureCost").innerText = futureCost.toFixed(2);
+  // // document.getElementById("savedAmountPerMonth").innerText =
+  //   savedAmountPerMonth.toFixed(2);
   // document.getElementById("termInMonths").innerText = termInMonths;
 }
 
@@ -134,18 +138,10 @@ function calculateSip() {
           futureValue *= (1 + monthlyRate);
   }
 
-  // const futureCost =
-  //   currentExpenses * Math.pow(1 + inflationRate, termInYears);
-  // const termInMonths = termInYears * 12;
-  // const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
+  // document.getElementById("futureValue").innerText = futureValue.toFixed(2);
+  // document.getElementById("termInYears").innerText = termInYears;
 
-
-
-
-  document.getElementById("futureValue").innerText = futureValue.toFixed(2);
-  // document.getElementById("savedAmountPerMonth").innerText =
-  //   savedAmountPerMonth.toFixed(2);
-  document.getElementById("termInYears").innerText = termInYears;
+  futureCostCell.textContent = futureValue.toFixed(2);
 }
     
 
