@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inflation Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 style="color: #361cc1;;">Inflation Calculator</h2>
+      <br>
+      <div class="row">
+        <!-- Div 1: Age related inputs -->
+        <div class="col">
+          <!-- <h3>Age</h3> -->
+          <div class="form-group">
+            <label for="currentExpenses">Current Cost of Expenses (Rs.)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="currentExpenses"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="inflationRate">Expected Annual Inflation Rate (%)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inflationRate"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="termInYears">Term (in years)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="termInYears"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Div 2: Rate related inputs -->
+        <!-- <div class="col-lg-4 col-md-6 mb-3">
+          <h3>Rate(%)</h3>
+          <div class="form-group">
+            <label for="inflationRate">Rate of Inflation (%)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inflationRate"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="postTaxReturnRate">Post Tax Rate of Return (%)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="postTaxReturnRate"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="currentInvestmentRate"
+              >Current Investment Rate (%)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="currentInvestmentRate"
+              required
+            />
+          </div>
+        </div> -->
+
+        <!-- Div 3: Money related inputs -->
+        <!-- <div class="col-lg-4 col-md-12 mb-3">
+          <h3>Expenses</h3>
+          <div class="form-group">
+            <label for="currentExpenses">Current Expenses (per month)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="currentExpenses"
+              required
+            />
+          </div><br>
+          <div class="form-group">
+            <label for="retirementCorpus">Amount you already have (Rs.)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="retirementCorpus"
+              required
+            />
+          </div>
+        </div> -->
+      </div>
+      <br>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="calculateInflation(),document.getElementById('hiddenElement').style.display = 'block';"
+      >
+        Calculate
+      </button>
+      <h3 class="mt-4"></h3>
+      <div id="hiddenElement" class="hiddenElement">
+        <div class="row">
+          <div class="col">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Outflow</th>
+                          <th scope="col">Amount(Rs.)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Future Cost</td>
+                      <td id="futureCost">NA</td>
+                  </tr>
+                  <tr>
+                      <td>Amount to be saved per month</td>
+                      <td id="savedAmountPerMonth">NA</td>
+                  </tr>
+                  <!-- <tr>
+                      <td>How much SIP is required to save (per month)</td>
+                      <td id="sipRequiredCell">NA</td>
+                  </tr> -->
+                  </tbody>
+              </table>
+              
+              <br>
+              
+                <div class="col">
+                  <p class="text-end">*Figures may vary by a few pointers</p>
+                  <p class="text-end">*This is for educational purposes only</p>
+              </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    
+
+    <script>
+      
+    </script>
+  </body>
+</html>
