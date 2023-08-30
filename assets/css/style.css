@@ -2458,3 +2458,17 @@ button[aria-expanded="true"] {
   border-radius: 10px;
   margin-right: 0px;
   }
+  .our-service-ul li i {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin-right: 15px;
+    color: green;
+  }
+  
+  .our-service-ul li {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+  }
