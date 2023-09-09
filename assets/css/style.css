@@ -2464,6 +2464,13 @@ button[aria-expanded="true"] {
     margin-right: 15px;
     color: green;
   }
+
+  .school-curriculum-ul li i {
+    font-size: 1em;
+    font-weight: normal;
+    margin-right: 15px;
+    color: green;
+  }
   
   .our-service-ul li {
     font-size: 1.2em;
