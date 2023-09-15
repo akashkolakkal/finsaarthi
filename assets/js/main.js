@@ -47,12 +47,10 @@ function calculateRetirement() {
 
         const sipRequired =
           sipYearly / 12;
-        document.getElementById("futureExpenses").innerText =
-          futureExpenses.toFixed(2);
-        document.getElementById("corpusRequiredAtRetirement").innerText =
-          corpusRequiredAtRetirement.toFixed(2);
-        document.getElementById("sipRequired").innerText =
-          sipRequired.toFixed(2);
+
+        futureValueCell.textContent = Math.round(futureExpenses).toLocaleString('hi-IN');
+        corpusRequiredCell.textContent = Math.round(corpusRequiredAtRetirement).toLocaleString('hi-IN')
+        sipRequiredCell.textContent = Math.round(sipRequired).toLocaleString('hi-IN')
 }
 
 function calculateGoals() {
@@ -80,10 +78,9 @@ function calculateGoals() {
   const savedAmountPerMonth =
     (subtractfrom * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
 
-  document.getElementById("futureCost").innerText = futureCost.toFixed(2);
-  document.getElementById("savedAmountPerMonth").innerText =
-    savedAmountPerMonth.toFixed(2);
-  document.getElementById("termInMonths").innerText = termInMonths;
+  futureCostCell.textContent = Math.round(futureCost).toLocaleString('hi-IN')
+  savedAmountPerMonthCell.textContent = Math.round(savedAmountPerMonth).toLocaleString('hi-IN')
+  termInMonthsCell.textContent = termInMonths;
 }
 
 function calculateInflation() {
@@ -104,10 +101,13 @@ function calculateInflation() {
 
   const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
 
-  document.getElementById("futureCost").innerText = futureCost.toFixed(2);
-  document.getElementById("savedAmountPerMonth").innerText =
-    savedAmountPerMonth.toFixed(2);
+  // document.getElementById("futureCost").innerText = futureCost.toFixed(2);
+  // // document.getElementById("savedAmountPerMonth").innerText =
+  //   savedAmountPerMonth.toFixed(2);
   // document.getElementById("termInMonths").innerText = termInMonths;
+
+  futureCostCell.textContent = Math.round(futureCost).toLocaleString('hi-IN');
+  savedAmountPerMonthCell.textContent = Math.round(savedAmountPerMonth).toLocaleString('hi-IN');
 }
 
 function calculateSip() {
@@ -130,18 +130,10 @@ function calculateSip() {
           futureValue *= (1 + monthlyRate);
   }
 
-  // const futureCost =
-  //   currentExpenses * Math.pow(1 + inflationRate, termInYears);
-  // const termInMonths = termInYears * 12;
-  // const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
+  // document.getElementById("futureValue").innerText = futureValue.toFixed(2);
+  // document.getElementById("termInYears").innerText = termInYears;
 
-
-
-
-  document.getElementById("futureValue").innerText = futureValue.toFixed(2);
-  // document.getElementById("savedAmountPerMonth").innerText =
-  //   savedAmountPerMonth.toFixed(2);
-  document.getElementById("termInYears").innerText = termInYears;
+  futureCostCell.textContent = Math.round(futureValue).toLocaleString('hi-IN')
 }
     
 

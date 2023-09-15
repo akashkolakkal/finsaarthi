@@ -11,88 +11,86 @@
     <div class="container mt-5">
       <h2 style="color: #361cc1;;">Inflation Calculator</h2>
       <br>
-      <form>
-        <div class="form-group">
-          <label for="currentExpenses">Current Cost of Expenses (Rs.)</label>
-          <input
-            type="number"
-            class="form-control"
-            id="currentExpenses"
-            required
-          />
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="inflationRate">Expected Annual Inflation Rate (%)</label>
-          <input
-            type="number"
-            class="form-control"
-            id="inflationRate"
-            required
-          />
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="termInYears">Term (in years)</label>
-          <input type="number" class="form-control" id="termInYears" required />
-        </div>
-        <br>
-        <button
-          type="button"
-          class="btn btn-primary"
-          onclick="calculateInflation(),document.getElementById('hiddenElement').style.display = 'block';"
-        >
-          Calculate
-        </button>
-      </form>
-
-      <h3 class="mt-4"></h3>
-      <div id="hiddenElement" class="hiddenElement">
       <div class="row">
         <div class="col">
-          <div class="wrapper">
-          <p1><span style="color: black;">Future Cost = </span><span style="font-weight: bold; font-size: 1.5em;">Rs.</span><span style="font-weight: bold; font-size: 1.5em;" id="futureCost"></span></p1>
+          <div class="form-group">
+            <label for="currentExpenses">Current Cost of Expenses (Rs.)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="currentExpenses"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="inflationRate">Expected Annual Inflation Rate (%)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inflationRate"
+              required
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="termInYears">Term (in years)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="termInYears"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <br>
 
-          <br>
-          <p1><span style="color: black;">
-            Amount to be saved per month = </span>
-            <span style="font-weight: bold; font-size: 1.5em;">Rs.</span>
-            <span style="font-weight: bold; font-size: 1.5em;" id="savedAmountPerMonth"></span>
-          </p1>
-        </div>
-          <br>
-          <br>
-          <p class="text-end">*Figures may vary by a few pointers</p>
-          <p class="text-end">*This is for educational purposes only</p>
-        </div>
-      </div>  
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="calculateInflation(),document.getElementById('hiddenElement').style.display = 'block';"
+      >
+        Calculate
+      </button>
+      <h3 class="mt-4"></h3>
+      <div id="hiddenElement" class="hiddenElement">
+        <div class="row">
+          <div class="col">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Outflow</th>
+                          <th scope="col">Amount (Rs.)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Future Cost</td>
+                      <td id="futureCostCell">NA</td>
+                  </tr>
+                  <tr>
+                      <td>Amount to be saved per month</td>
+                      <td id="savedAmountPerMonthCell">NA</td>
+                  </tr>
+                  </tbody>
+              </table>
+              
+              <br>
+              
+                <div class="col">
+                  <p class="text-end">*Figures may vary by a few pointers</p>
+                  <p class="text-end">*For educational purposes only</p>
+              </div>
+          </div>
+          </div>
+      </div>
     </div>
-    </div>
+  </div>
+    
 
     <script>
-      function calculateInflation() {
-        const currentExpenses = parseFloat(
-          document.getElementById("currentExpenses").value
-        );
-        const inflationRate =
-          parseFloat(document.getElementById("inflationRate").value) / 100;
-        const termInYears = parseFloat(
-          document.getElementById("termInYears").value
-        );
-
-        const futureCost =
-          currentExpenses * Math.pow(1 + inflationRate, termInYears);
-        const termInMonths = termInYears * 12;
-        const savedAmountPerMonth = (futureCost * nominal) / (Math.pow(1 + nominal, termInMonths) - 1);
-
-
-
-
-        document.getElementById("futureCost").innerText = futureCost.toFixed(2);
-        document.getElementById("savedAmountPerMonth").innerText =
-          savedAmountPerMonth.toFixed(2);
-        document.getElementById("termInMonths").innerText = termInMonths;
-      }
+      
     </script>
   </body>
 </html>
